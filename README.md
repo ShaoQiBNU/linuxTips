@@ -28,13 +28,17 @@ cat input.txt | awk -F, '{print $1, $3}' > output.txt
 input.txt为输入文件，output.txt为输出文件
 ```
 
-# sort排序
+# sort排序和去重
 
 ```linux
 sort -k1n,1 -k2n,2 input.txt -o input.txt
 
 按照第一列和第二列数值排序
-```
+
+sort -t $'\t' -n -k1,1 untitled.txt | sort -u -k2,2
+
+按照第一列数值排序，按第二列去重，重复的保留的是第一列数值小的
+``` 
 
 # uniq
 ```linux
