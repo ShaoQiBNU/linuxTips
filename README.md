@@ -27,8 +27,15 @@ cat input.txt | awk -F, '{print $1, $3}' > output.txt
 
 input.txt为输入文件，output.txt为输出文件
 
+
 awk -F '\t' '{sum[$2]++}END{for(i in sum) print i "\t" sum[i]}' all.data
+
 查看all.data中第2列标签个数，类似groupby然后count(*)
+
+
+awk '$2=="天文"' all.data | head -10
+
+查看all.data中第2列标签为天文的前10行数据
 ```
 
 # sort排序和去重
