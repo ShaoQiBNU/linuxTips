@@ -37,7 +37,7 @@ sort -k1n,1 -k2n,2 input.txt -o input.txt
 
 sort -t $'\t' -n -k1,1 untitled.txt | sort -u -k2,2
 
-按照第一列数值排序，按第二列去重，重复的保留的是第一列数值小的
+指定分隔符为\t，按照第一列数值降序排序，按第二列去重，重复的保留的是第一列数值小的
 ``` 
 
 # uniq
