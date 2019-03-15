@@ -22,7 +22,7 @@ nohup python -u librosa_mp4.py > librosa_mp4.log 2>&1 &
 ```
 
 # awk指定分隔符
-```linux
+```shell
 cat input.txt | awk -F, '{print $1, $3}' > output.txt
 
 input.txt为输入文件，output.txt为输出文件
@@ -30,7 +30,7 @@ input.txt为输入文件，output.txt为输出文件
 
 # sort排序和去重
 
-```linux
+```shell
 sort -k1n,1 -k2n,2 input.txt -o input.txt
 
 按照第一列和第二列数值排序
