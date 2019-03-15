@@ -26,6 +26,9 @@ nohup python -u librosa_mp4.py > librosa_mp4.log 2>&1 &
 cat input.txt | awk -F, '{print $1, $3}' > output.txt
 
 input.txt为输入文件，output.txt为输出文件
+
+awk -F '\t' '{sum[$2]++}END{for(i in sum) print i "\t" sum[i]}' all.data
+查看all.data中第2列标签个数，类似groupby然后count(*)
 ```
 
 # sort排序和去重
