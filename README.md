@@ -36,6 +36,12 @@ awk -F '\t' '{sum[$2]++}END{for(i in sum) print i "\t" sum[i]}' all.data
 awk '$2=="天文"' all.data | head -10
 
 查看all.data中第2列标签为天文的前10行数据
+
+
+awk -F '\t' '{print substr($5,3)}' all.data | more
+
+all.data中第5列数据，从第3个字符串开始截取到最后，输出
+
 ```
 
 # sort排序和去重
