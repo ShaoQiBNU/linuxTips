@@ -21,6 +21,17 @@ input.txt为输入文件，output.txt为输出文件
 nohup python -u librosa_mp4.py > librosa_mp4.log 2>&1 &
 ```
 
+## 如果程序已经在前台运行，也可以通过以下命令放到后台执行
+```
+ctrl + z 暂停进程
+
+bg
+
+jobs
+
+disown -h %jobs号
+```
+
 # awk指定分隔符
 ```shell
 cat input.txt | awk -F, '{print $1, $3}' > output.txt
