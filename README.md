@@ -15,10 +15,12 @@ input.txt为输入文件，output.txt为输出文件
 ```
 
 
-# 后台运行python脚本
+# 后台运行脚本
 
 ```linux
 nohup python -u librosa_mp4.py > librosa_mp4.log 2>&1 &
+
+nohup sh download_anet_dataset_1.sh 2>&1|tee ./download_anet_dataset_1.sh.log &
 ```
 
 ## 如果程序已经在前台运行，也可以通过以下命令放到后台执行
