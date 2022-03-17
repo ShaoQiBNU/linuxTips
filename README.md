@@ -76,6 +76,13 @@ uniq -d input.txt > output_repeat.txt
 输出input.txt里重复的数据
 ```
 
+# 权限授予
+```
+chmod -R 777 /ldap_home/qi.shao
+
+777 是读、写、执行权限
+```
+
 
 
 
